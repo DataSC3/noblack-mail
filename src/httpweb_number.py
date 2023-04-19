@@ -204,8 +204,3 @@ class HttpWebNumber:
         except KeyboardInterrupt:
             print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
 
-
-
-if __name__ == "__main__":
-    https_web_number = HttpWebNumber()
-    https_web_number.print_number_results
