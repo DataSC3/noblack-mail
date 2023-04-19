@@ -9,9 +9,9 @@
     —— 2023
 
 ### **Правооблодатель:**
-    Разработчик: FELIX4
-    Команда: noblack.command
-    Канал: noblack_channel
+    * Разработчик: FELIX4
+    * Команда: noblack.command
+    * Канал: noblack_channel
     —— TELEGRAM
 
 ### **Отказ от ответственности:**
