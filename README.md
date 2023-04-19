@@ -33,7 +33,7 @@
 6. python3 noblack-mail.py
 ```
 
-##### ИЛИ МОЖЕТЕ СКОИРОВАТЬ ЭТО И ВСТАВИТЬ. 
+##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
 pkg update -y && upgrade -y && pkg install git -y python -y && pip install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
 ```
@@ -48,7 +48,7 @@ cd No-BlackM
 python3 No-BlackMail.py
 ```
 
-##### ИЛИ МОЖЕТЕ СКОИРОВАТЬ ЭТО И ВСТАВИТЬ. 
+##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
 sudo apt-get install git && sudo apt-get install python3 &&pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
 ```
