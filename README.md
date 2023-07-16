@@ -43,7 +43,7 @@ pkg update -y && upgrade -y && pkg install git -y python -y && pip install reque
 sudo apt-get install git 
 sudo apt-get install python3
 pip3 install requests bs4 
-git clone https://github.com/DataSC3/No-BlackM
+git clone https://github.com/DataSC3/noblack-mail.git
 cd No-BlackM
 python3 No-BlackMail.py
 ```
