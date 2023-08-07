@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
         # Меню управления
         print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[1] {COLOR_CODE["LI_G"]}'
-            f'Проверить {COLOR_CODE["RED"]}номер{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
+            f'Проверить {COLOR_CODE["RED"]}Номер{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
             
             f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[2] {COLOR_CODE["LI_G"]}'
             f'Проверить {COLOR_CODE["RED"]}MNP{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
