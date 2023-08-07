@@ -61,7 +61,7 @@ def print_welcome_text():
 
     try:
         console_clear()
-        with open("src/Соглашение") as file:
+        with open("src/Соглашение", encoding="UTF-8") as file:
 
             print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
             print(F'{COLOR_CODE["LI_G"]}{file.read()}')
