@@ -28,7 +28,8 @@ GLOBAL_SOFT_INFO = {
     "NOLACK_AUTO_SITE": "https://noblack-auto.ru",
     "SOFT_ORIGINAL_LINK": "https://github.com/DataSC3/noblack-mail.git",
     "SOFT_ORIGINAL_CHANNEL": "https://t.me/noblack_channel",
-    "SOFT_VERSION": "1.0.5"}
+    "SOFT_VERSION": "1.0.6",
+    "BLOCKED_COUNTRIES": ["Ukraine"]}
 
 
 # Очистка консоли
@@ -36,12 +37,10 @@ def console_clear() -> None:
     """Очиска консоли (Windows / Linux)"""
     
     # Очистка для Windows
-    if os.sys.platform == "win32":
-        os.system("cls")
-    
+    if os.sys.platform == "win32": os.system("cls")
+
     # Очистка для Linux
-    else:
-        os.system("clear")
+    else: os.system("clear")
 
 # Вывод лого
 def print_banner() -> None:
@@ -56,12 +55,12 @@ def print_banner() -> None:
     print(F'{COLOR_CODE["LI_G"]}*––––––––––––––––––—————* V {GLOBAL_SOFT_INFO["SOFT_VERSION"]}{COLOR_CODE["RESET"]} *—BETA————*\n')
 
 # Показ текст соглашения
-def print_welcome_text():
+def print_welcome_text() -> None:
     """Вывод текст о соглашении"""
-
     try:
         console_clear()
-        with open("src/Соглашение", encoding="UTF-8") as file:
+        agreement_file_name: str = "src/.Соглашение"
+        with open(agreement_file_name, encoding="UTF-8") as file:
 
             print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
             print(F'{COLOR_CODE["LI_G"]}{file.read()}')
@@ -70,7 +69,7 @@ def print_welcome_text():
             input(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
                 f'Чтобы принять соглашение, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')
 
-            os.remove('src/Соглашение')
+            os.remove(agreement_file_name)
 
     except FileNotFoundError: ...
     except KeyboardInterrupt:
