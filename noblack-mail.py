@@ -20,7 +20,7 @@ except ImportError:
     # Совет по установке модулей и выход
     print(f'\n{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] {COLOR_CODE["DARK"]}ВНИМАНИЕ У ВАС ПРОБЛЕМКА, НО МЫ ЕГО РЕШИМ!{COLOR_CODE["RESET"]}')
 
-    print(f'{COLOR_CODE["RED"]}[+] {COLOR_CODE["YELLOW"]}Оригинально программное обеспечение находиться на: '+
+    print(f'{COLOR_CODE["RED"]}[+] {COLOR_CODE["YELLOW"]}Оригинальное программное обеспечение находиться на: '+
          f'{COLOR_CODE["CYAN"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}{COLOR_CODE["RESET"]}\n'+
          f'{COLOR_CODE["RED"]}[+] {COLOR_CODE["YELLOW"]}'+
          f'Мы в телеграмме: {COLOR_CODE["CYAN"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_CHANNEL"]}{COLOR_CODE["RESET"]}')
