@@ -123,3 +123,4 @@ class HttpWebMnp:
 
         except KeyboardInterrupt:
             print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
+
