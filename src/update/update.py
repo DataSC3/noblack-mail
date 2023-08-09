@@ -29,7 +29,8 @@ class Update:
             # Проверка обновлении по ссылке
             github_commits_content = requests.get(url=self.__update_link)
             if github_commits_content.status_code != 200:
-                print(f'{COLOR_CODE["RED"]}[!] Ошибка, не получилось проверить наличие обновлении! {COLOR_CODE["RESET"]}\n')    
+                print(f'{COLOR_CODE["RED"]}[!] Ошибка,{COLOR_CODE["RESET"]}{COLOR_CODE["RED"]} не получилось проверить наличие обновлении! {COLOR_CODE["RESET"]}\n')    
+                return None
 
             else:
                 bs_content_len: int = len(bs(github_commits_content.text, "html.parser")
@@ -39,8 +40,8 @@ class Update:
                 return bs_content_len        
         
         except requests.exceptions.ConnectionError as connection_error:
-            print(f'{COLOR_CODE["RED"]}[!] Ошибка, не получилось проверить наличие обновлении! {COLOR_CODE["RESET"]}')
-            return None
+            print(f'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] Ошибка,{COLOR_CODE["RESET"]}{COLOR_CODE["RED"]} не получилось проверить наличие обновлении! {COLOR_CODE["RESET"]}')
+            return {"connection": True}
         
         except Exception as error: 
             print(f'{COLOR_CODE["RED"]}[!] Информация об ошибке: {COLOR_CODE["RESET"]}')
@@ -54,9 +55,10 @@ class Update:
             version_file_name: str = "src/update/version"
             with open(file=version_file_name, mode="r") as file_read:
                 now_version = int(file_read.read().strip())
+                update_checking = self.check
 
                 # Проверка на полученние новой версии и сравнение версии
-                if self.check and type(self.check) == int and now_version != self.check:
+                if update_checking and type(update_checking) == int and now_version != update_checking:
                     
                     print(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[^] {COLOR_CODE["LI_G"]}'
                     f'Доступно новое {COLOR_CODE["RED"]}обновление!!.{COLOR_CODE["RESET"]}')
@@ -72,9 +74,11 @@ class Update:
 
                 # Новой версии еще нет
                 else:
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[*] {COLOR_CODE["LI_G"]}'
-                    f'Новые обновлении еще не доступны.{COLOR_CODE["RESET"]}')
-        
+                    if not update_checking:
+                        print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[*] {COLOR_CODE["LI_G"]}'
+                        f'Новые обновлении еще не доступны.{COLOR_CODE["RESET"]}')
+                    
+                    
 
 
         except FileNotFoundError: ...
