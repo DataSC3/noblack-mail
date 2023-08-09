@@ -76,6 +76,11 @@ class HttpWebNumber:
                     _number_data_region = _get_user_number_data.get('region')
                     _number_data_other = _get_user_number_data.get('0')
 
+                    if not _number_data_region:
+                        _number_data_region: dict = {"autocod": self.__not_found_text, 
+                        "name": self.__not_found_text,
+                        "okrug": self.__not_found_text}
+
                     # Страна            
                     # Для украины информация о стране отсутствует
                     if _number_data_country.get("country_code3") == 'UKR':
