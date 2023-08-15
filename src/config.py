@@ -66,11 +66,14 @@ def print_welcome_text() -> None:
             print(F'{COLOR_CODE["LI_G"]}{file.read()}')
             print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
 
+
+            try: os.remove(agreement_file_name)
+            except PermissionError: 
+                print(F'{COLOR_CODE["RED"]}[!] К сожалению, не получилось удалить файл, содержащий пользовательское соглашение. {COLOR_CODE["LI_G"]}Этот баннер будет появляться при каждом запуске.')
+                
             input(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
-                f'Чтобы принять соглашение, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')
-
-            os.remove(agreement_file_name)
-
+                f'Чтобы принять соглашение, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')        
+    
     except FileNotFoundError: ...
     except KeyboardInterrupt:
         print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
