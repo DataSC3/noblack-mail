@@ -51,7 +51,8 @@ def print_banner() -> None:
     print(COLOR_CODE["GREEN"] + "█▄█ █▄▄ █▀█ █▄▄ █ █ █ ▀ █ █▀█ █ █▄▄" + COLOR_CODE["RESET"])
     print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}\n* Разработчик: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["AUTHOR"]}{COLOR_CODE["RESET"]}')
     print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Мы в Телеграме: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_CHANNEL"]}{COLOR_CODE["RESET"]}')
-    print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Орегинальная ссылка: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}{COLOR_CODE["RESET"]}')
+    print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Оригинальная ссылка: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}{COLOR_CODE["RESET"]}')
+    print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Совет от нас: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}Воспользуйтесь пунктом 5.{COLOR_CODE["RESET"]}')
     print(F'{COLOR_CODE["LI_G"]}*––––––––––––––––––—————* V {GLOBAL_SOFT_INFO["SOFT_VERSION"]}{COLOR_CODE["RESET"]} *—BETA————*\n')
 
 # Показ текст соглашения
