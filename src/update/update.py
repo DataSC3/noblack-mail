@@ -56,6 +56,8 @@ class Update:
             with open(file=version_file_name, mode="r") as file_read:
                 now_version = int(file_read.read().strip())
                 update_checking = self.check
+                if not now_version: now_version = 0
+                
 
                 # Проверка на полученние новой версии и сравнение версии
                 if update_checking and type(update_checking) == int and now_version != update_checking:
@@ -81,7 +83,16 @@ class Update:
                     
 
 
-        except FileNotFoundError: ...
+        except FileNotFoundError: 
+            print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Отсутствует файл "version"{COLOR_CODE["RESET"]} (noblack-mail/src/update/version)')
+            user_permission = input(f'{COLOR_CODE["RED"]}[?] Создать файл{COLOR_CODE["YELLOW"]} (Да - 1 / Нет - 0): {COLOR_CODE["RESET"]}')
+            if not user_permission or user_permission == "1": 
+                try: open("src/update/version", "w")
+                except PermissionError: 
+                    print(F'{COLOR_CODE["RED"]}[!] К сожалению, не получилось создать файл, обновлении. {COLOR_CODE["LI_G"]}Отсутствует разрешение на создание файлов (попробуйте создать файл в ручную "noblack-mail/src/update/version" и прописать там "0").')
+
+
+
         except ValueError:
             print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Поврежден файл "version"{COLOR_CODE["RESET"]} (noblack-mail/src/update/version)')
             print(f'{COLOR_CODE["RED"]}[*] {COLOR_CODE["YELLOW"]}Проверка наличия обновлений, недоступно.{COLOR_CODE["RESET"]} Переустановите софт.')
