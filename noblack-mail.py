@@ -30,7 +30,7 @@ except ImportError:
     exit(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}У вас отсутствует модули: '+
          f'{COLOR_CODE["CYAN"]}requests{COLOR_CODE["RESET"]} и/или {COLOR_CODE["CYAN"]}'+
          f'bs4{COLOR_CODE["RESET"]}. {COLOR_CODE["RED"]}\n[*] {COLOR_CODE["YELLOW"]}'+
-         f'Напишите в терминал/консоль: {COLOR_CODE["GREEN"]}pip3 install requests bs4{COLOR_CODE["RESET"]}')
+         f'Напишите в терминал/консоль: {COLOR_CODE["GREEN"]}apt-get install python3-pip && pip3 install requests bs4{COLOR_CODE["RESET"]}')
 
 
 if __name__ == "__main__":
