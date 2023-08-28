@@ -74,7 +74,7 @@ pip install requests bs4
 - Скачайте [репозиторий](https://github.com/DataSC3/noblack-mail/archive/master.zip) и распакуйте в удобное место.
 
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
-- Запустите скрипт командой `python noblack-mail.py`**
+- Запустите скрипт командой `python noblack-mail.py`
 
 ---
 <img src="src/banner.png" alt="Баннер главного меню софта.">
