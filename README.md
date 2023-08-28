@@ -76,4 +76,4 @@ pip install requests bs4
 
 
 
-[Баннер](src/banner.png)
+<img src="src/banner.png" alt="Баннер главного меню софта.">
