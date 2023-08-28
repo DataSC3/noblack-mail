@@ -73,3 +73,7 @@ pip install requests bs4
 
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
 - Запустите скрипт командой `python noblack-mail.py`**
+
+
+
+[Баннер](src/banner.png)
