@@ -1,7 +1,6 @@
 <meta property="og:title" content="noblack-mail">
 <meta property="og:description" content="Поисковой сервис данных, по номеру телефона. От команды «NOBLACK».">
 <meta property="og:image" content="src/banner.png">
-<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA" />
 
 # 🔥 **NOBLACK-MAIL v:1.0.6** BETA 🔥
 
