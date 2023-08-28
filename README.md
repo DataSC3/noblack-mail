@@ -32,31 +32,33 @@
 ## **📱 Termux:**
 ```Bash
 1. pkg update -y && upgrade -y
-2. pkg install git -y python -y
-3. pip install requests bs4 
-4. git clone https://github.com/DataSC3/noblack-mail
+2. pkg install git -y python3 -y
+3. pkg install python3-pip
+4. pkg install openssl
+5. pip install requests bs4 
+6. git clone https://github.com/DataSC3/noblack-mail.git
+7. cd noblack-mail
+8. python3 noblack-mail.py
+```
+
+##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
+```Bash
+pkg update -y && upgrade -y && pkg install git -y python3 -y && pkg install python3-pip && pkg install openssl && pip install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
+```
+---
+## **💻 Linux:**
+```Bash
+1. sudo apt-get install git 
+2. sudo apt-get install python3
+3. pip3 install requests bs4 
+4. git clone https://github.com/DataSC3/noblack-mail.git
 5. cd noblack-mail
 6. python3 noblack-mail.py
 ```
 
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
-pkg update -y && upgrade -y && pkg install git -y python -y && pip install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
-```
----
-## **💻 Linux:**
-```Bash
-sudo apt-get install git 
-sudo apt-get install python3
-pip3 install requests bs4 
-git clone https://github.com/DataSC3/No-BlackM
-cd No-BlackM
-python3 No-BlackMail.py
-```
-
-##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
-```Bash
-sudo apt-get install git && sudo apt-get install python3 &&pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
+sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
 ```
 ---
 ## **🖥 Windows (cmd):**
@@ -74,6 +76,5 @@ pip install requests bs4
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
 - Запустите скрипт командой `python noblack-mail.py`**
 
-
-
+---
 <img src="src/banner.png" alt="Баннер главного меню софта.">
