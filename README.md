@@ -2,6 +2,7 @@
 <meta property="og:description" content="Поисковой сервис данных, по номеру телефона. От команды «NOBLACK».">
 <meta property="og:image" content="src/banner.png">
 <meta name="author" content="FELIX4">
+<meta name="keywords" content="noblack-mail, поиск по номеру телефона, пробив">
 
 # 🔥 **NOBLACK-MAIL v:1.0.6** BETA 🔥
 
