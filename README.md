@@ -66,6 +66,36 @@ pkg update -y && upgrade -y && pkg install git -y python3 -y && pkg install pyth
 ```Bash
 sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
 ```
+
+## **Debian:**
+```Bash
+1. sudo apt-get install git 
+2. sudo apt-get install python3
+3. pip3 install requests bs4 
+4. git clone https://github.com/DataSC3/noblack-mail.git
+5. cd noblack-mail
+6. python3 noblack-mail.py
+```
+
+##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
+```Bash
+sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
+```
+
+## **Arch:**
+```Bash
+1. sudo pacman -Syu python git
+2. pip3 install requests bs4
+3. git clone https://github.com/DataSC3/noblack-mail.git
+3. cd noblack-mail
+5. python3 noblack-mail.py
+```
+
+###### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ.
+```Bash
+sudo pacman -Syu git python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
+```
+
 ---
 ## **🖥 Windows (cmd):**
 - Установите Python 3:\
