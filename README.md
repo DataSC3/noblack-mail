@@ -87,7 +87,7 @@ sudo apt-get install git && sudo apt-get install python3 && pip3 install request
 1. sudo pacman -Syu python git
 2. pip3 install requests bs4
 3. git clone https://github.com/DataSC3/noblack-mail.git
-3. cd noblack-mail
+4. cd noblack-mail
 5. python3 noblack-mail.py
 ```
 
