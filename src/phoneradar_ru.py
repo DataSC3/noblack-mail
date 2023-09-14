@@ -44,11 +44,12 @@ class PhoneRadar:
                 rating_link: str = self.__phoneradar_url + self.__user_number
                 response: bytes = bs(resurce, "html.parser").find("div", class_="card-body")
                 rating: str = response.find("div", class_="alert").text.strip()
-                
+                print(rating_link)
                 return rating, rating_link
-            
+                
             except AttributeError:
                 return self.__not_found_text, rating_link
-            
+                print(rating_link)
+        print(rating_link)
         return self.__not_found_text, rating_link
     
