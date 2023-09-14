@@ -176,11 +176,11 @@ class HttpWebNumber:
                         f'{_number_data_other.get("longitude", self.__not_found_text)}{COLOR_CODE["RESET"]}')
                     
                     # Отзывы о номере
-                    _phone_radar = PhoneRadar(user_number=_user_number)
-                    _phone_rating, _rating_link = _phone_radar.get_rating
+                    phone_radar = PhoneRadar(user_number=_user_number)
+                    phone_rating, rating_link = phone_radar.get_rating
                     print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Оценка номера в сети:{COLOR_CODE["F_CL"]} '+
-                        f'{_phone_rating}{COLOR_CODE["URL_L"]}{COLOR_CODE["UNDERLINE"]} {_rating_link}{COLOR_CODE["RESET"]}')
+                        f'{phone_rating}{COLOR_CODE["URL_L"]}{COLOR_CODE["UNDERLINE"]} {rating_link}{COLOR_CODE["RESET"]}')
                     
                     print(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] {COLOR_CODE["LI_G"]}Проверьте эти ссылки (Мессенджеры и Социальные сети): {COLOR_CODE["RESET"]}')
                     print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}0{COLOR_CODE["CYAN"]}] {COLOR_CODE["URL_L"]}{COLOR_CODE["UNDERLINE"]}https://www.instagram.com/accounts/password/reset{COLOR_CODE["RESET"]}{COLOR_CODE["DARK"]} - Поиск аккаунта в Instagram')
