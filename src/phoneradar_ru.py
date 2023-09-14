@@ -44,12 +44,17 @@ class PhoneRadar:
                 rating_link: str = self.__phoneradar_url + self.__user_number
                 response: bytes = bs(resurce, "html.parser").find("div", class_="card-body")
                 rating: str = response.find("div", class_="alert").text.strip()
-                print(rating_link)
+                print("~~~~~~~~~~~rating_link~~~~~~~~~~~\n",rating_link)
+                print("~~~~~~~~~~~response~~~~~~~~~~~\n",response)
+                print("~~~~~~~~~~~rating~~~~~~~~~~~\n",rating)
+                print("~~~~~~~~~~~self.__phoneradar_url~~~~~~~~~~~\n",self.__phoneradar_url)
+                print("~~~~~~~~~~~self.__user_number~~~~~~~~~~~\n",self.__user_number)
                 return rating, rating_link
-                
+                print("~~~~~~~~~~~rating_link~~~~~~~~~~~\n",rating_link)
+                print("~~~~~~~~~~~rating~~~~~~~~~~~\n",rating)
             except AttributeError:
                 return self.__not_found_text, rating_link
-                print(rating_link)
-        print(rating_link)
+                print("~~~~~~~~~~~rating_link~~~~~~~~~~~\n",rating_link)
         return self.__not_found_text, rating_link
+        print("~~~~~~~~~~~rating_link~~~~~~~~~~~\n",rating_link)
     
