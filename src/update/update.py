@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup as bs
 
 class Update:
     def __init__(self) -> None:
-        self.__update_link: str = F'{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"][:-4]}/commits/main'
+        self.__update_link: str = F'{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]'
 
     def __str__(self) -> str:
         return F"Description: Обновляет клиент и/или уведомляет о новой версии: {self.__update_link}"
@@ -33,11 +33,10 @@ class Update:
                 return None
 
             else:
-                bs_content_len: int = len(bs(github_commits_content.text, "html.parser")
-                .find("div", class_="mb-3")
-                .find_all("li"))
-                
-                return bs_content_len        
+                # Поиск блока, содержащего текст "Commits"
+                target_span = bs(github_commits_content.text, "html.parser").find('span', text=lambda t: t and 'Commits' in t)
+                if target_span: return int(target_span.text.split()[0])
+                else: return None        
         
         except requests.exceptions.ConnectionError as connection_error:
             print(f'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] Ошибка,{COLOR_CODE["RESET"]}{COLOR_CODE["RED"]} не получилось проверить наличие обновлении! {COLOR_CODE["RESET"]}')
