@@ -28,7 +28,7 @@ GLOBAL_SOFT_INFO = {
     "NOLACK_AUTO_SITE": "https://noblack-auto.ru",
     "SOFT_ORIGINAL_LINK": "https://github.com/DataSC3/noblack-mail.git",
     "SOFT_ORIGINAL_CHANNEL": "https://t.me/noblack_channel",
-    "SOFT_VERSION": "1.0.6",
+    "SOFT_VERSION": "1.0.7",
     "BLOCKED_COUNTRIES": ["Ukraine"]}
 
 
