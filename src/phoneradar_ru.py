@@ -66,7 +66,7 @@ class PhoneRadar:
                 
                 return rating, rating_link
             
-            except AttributeError:
+            except (AttributeError, UnboundLocalError):
                 return self.__not_found_text, rating_link
             
         return self.__not_found_text, rating_link
