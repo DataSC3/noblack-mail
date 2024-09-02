@@ -15,7 +15,9 @@ class PhoneRadar:
     def __init__(self, user_number: str) -> None:
         self.__phoneradar_url: str = "https://phoneradar.ru/phone/"
         self.__not_found_text: str = "Информация отсутствует"
-        self.__user_number: str = user_number
+        self.__user_number: str = (user_number.replace(" ", "")
+            .replace("(", "").replace(")", "")
+            .replace("-", "").replace("+", ""))
     
     @lru_cache(maxsize=None)
     def __get_site_resurces(self):
@@ -42,8 +44,25 @@ class PhoneRadar:
         if resurce:
             try:
                 rating_link: str = self.__phoneradar_url + self.__user_number
-                response: bytes = bs(resurce, "html.parser").find("div", class_="card-body")
-                rating: str = response.find("div", class_="alert").text.strip()
+                response: bytes = bs(resurce, "html.parser")
+                
+                # Поиск нужного блока по href
+                target_block = response.find('a', href=F"/phone/{self.__user_number[1:]}")
+
+                # Если нужный блок найден
+                if target_block:
+
+                    # Переход к родительскому элементу div с классом "card-body"
+                    card_body = target_block.find_parent('div', class_='card-body')
+                    if card_body:
+                        # Комментарии о номере
+                        comment: str = card_body.find('p').text.strip()
+                        
+                        # Пользователь
+                        name: str = card_body.find('p').find_next().find_next().text
+                        
+                        # Результат
+                        rating = F"{comment} / {name}"
                 
                 return rating, rating_link
             
@@ -51,4 +70,4 @@ class PhoneRadar:
                 return self.__not_found_text, rating_link
             
         return self.__not_found_text, rating_link
-    
+ 
