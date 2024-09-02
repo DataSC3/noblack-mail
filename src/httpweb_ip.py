@@ -56,7 +56,8 @@ class HttpWebIp:
 
         # Получение данных IP искомого  
         try:
-            __result_ip_data = requests.get(self.__check_ip_link + user_ip)
+            __result_ip_data = requests.get(self.__check_ip_link + user_ip, headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"})
         
             if __result_ip_data.ok:
                 __return_ip_data: dict = __result_ip_data.json()
