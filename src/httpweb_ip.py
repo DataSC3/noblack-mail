@@ -31,7 +31,8 @@ class HttpWebIp:
 
         # Получение IP пользователя 
         try:
-            __my_ip = requests.get(self.__my_ip_link)
+            __my_ip = requests.get(self.__my_ip_link, headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"})
         
             if __my_ip.ok:
                 __return_user_ip: str = __my_ip.json().get("origin", "Ошибка при получении IP")
