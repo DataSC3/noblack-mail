@@ -34,7 +34,7 @@ class Update:
 
             else:
                 bs_content_len: int = len(bs(github_commits_content.text, "html.parser")
-                .find("div", class_="container-xl")
+                .find("div", class_="mb-3")
                 .find_all("li"))
                 
                 return bs_content_len        
