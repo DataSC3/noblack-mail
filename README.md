@@ -4,7 +4,7 @@
 <meta name="author" content="FELIX4">
 <meta name="keywords" content="noblack-mail, поиск по номеру телефона, пробив">
 
-# 🔥 **NOBLACK-MAIL v:1.0.6** BETA 🔥
+# 🔥 **NOBLACK-MAIL v:1.0.7** BETA 🔥
 
 ### **🔖 Новая версия:**
     * Поиск данных по номеру телефона;
