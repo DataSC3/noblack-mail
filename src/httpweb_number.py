@@ -31,7 +31,9 @@ class HttpWebNumber:
                 "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"})
         
             if __result_number_data.ok:
-                __result_number_data: dict = __result_number_data.json()
+                try: __result_number_data: dict = __result_number_data.json()
+                except: 
+                    exit(f'{COLOR_CODE["RED"]}[!] {COLOR_CODE["RED"]}Введите код страны{COLOR_CODE["RESET"]} например: +7 в место 8..\n')
 
             else:
                 __result_number_data: dict = {"status_error": True}
