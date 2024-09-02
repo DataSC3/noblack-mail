@@ -28,7 +28,8 @@ class HttpWebMnp:
 
         # Получение данных MNP по номеру тел. клиента 
         try:
-            __result_mnp_data = requests.get(self.__check_mnp_link + user_number)
+            __result_mnp_data = requests.get(self.__check_mnp_link + user_number, headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"})
         
             if __result_mnp_data.ok:
                 __get_mnp_data = __result_mnp_data.json()
