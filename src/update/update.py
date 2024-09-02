@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup as bs
 
 class Update:
     def __init__(self) -> None:
-        self.__update_link: str = F'{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]'
+        self.__update_link: str = F'{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}'
 
     def __str__(self) -> str:
         return F"Description: Обновляет клиент и/или уведомляет о новой версии: {self.__update_link}"
