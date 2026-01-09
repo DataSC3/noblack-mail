@@ -90,7 +90,7 @@ sudo apt-get install git && sudo apt-get install python3 && pip3 install request
 4. cd noblack-mail
 5. python3 noblack-mail.py
 ```
-
+sudo pacman -Syu git python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ.
 ```Bash
 sudo pacman -Syu git python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd noblack-mail && python3 noblack-mail.py
